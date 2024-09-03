@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #23262b;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.btn-color {
+  color: #a3adb2;
+}
+
+.fs {
+  font-size: 20px;
+  color: #969696;
+  line-height: 25.2px;
+  top: 96px;
+}
+
+.btn-container {
+  border-radius: 16px;
+}
+
+.active {
+  width: 195px;
+  height: 42px;
+  background-color: red;
+  border-radius: 16px;
+  padding: 10px 24px 10px 24px;
+  color: white;
+  box-shadow: 5.67px 5.67px 3.78px 0px #00000066;
+  margin-top: 3px;
+  transition: transform 15s ease-in-out; /* Smooth transition */
+}
+
+.arrow {
+  color: #96bee7;
+  box-shadow: 4px 5px 30px 5px #101213;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.arrow:hover {
+  box-shadow: -5px -3px 30px -10px #96bee7;
+  /* background-color: #96BEE7; */
+}
+.add-btn {
+  background-color: #6f787c;
+}
+
+.box-shadow {
+  box-shadow: 0.67px 5.67px 3.78px 12px #00000066;
+}
+
+.images img:hover {
+  transform: scale(1.04) rotate(-5deg);
+  filter: grayscale(100%);
+  transition: transform 0.3s ease-out; 
+  transform-origin: left;
+  z-index: 100;
+  overflow: visible;
+}
+
+.line {
+  background: linear-gradient(139.14deg, #303439 12.4%, #161718 94.96%);
+  width: 600px;
+  height: 3px;
+}
+
+@layer components {
+  .container {
+    @apply w-[720px] h-[316px] bg-[#363C43]  top-[96px] left-[922px];
+  }
+
+  .container1 {
+    @apply w-[597px] h-[60px]  left-[961px] gap-[6px] bg-black text-white z-50;
+  }
+
+  .container2 {
+    @apply w-[720px] h-[330px] bg-[#363C43] top-[453px] left-[922px];
+  }
+
+  .btn {
+    @apply w-[195px] h-[49px] text-center gap-[10px] text-[#A3ADB2];
+  }
+
+  .paragraph {
+    @apply w-[597px] h-[49px]  left-[961px] gap-[6px] mt-8 fs leading-loose;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+ 
+  .no-scrollbar {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+  }
+}
